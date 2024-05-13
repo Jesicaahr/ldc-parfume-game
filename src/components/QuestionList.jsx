@@ -13,61 +13,61 @@ const QuestionList = () => {
   });
   const questions = [
     {
-      questionText: "Kata mana yang paling menggambarkan diri kamu?",
+      questionText: "1. Kata mana yang paling menggambarkan diri kamu?",
       a: "Bertanggung Jawab",
       b: "Berani",
       c: "Penuh Empati",
     },
     {
-      questionText: "Warna apa yang paling kamu sukai?",
+      questionText: "2. Warna apa yang paling kamu sukai?",
       a: "Warna alam (coklat, hijau)",
       b: "Warna mencolok (merah, biru)",
       c: "Warna lembut (merah muda, ungu)",
     },
     {
-      questionText: "Weekend activity apa yang paling kamu suka?",
+      questionText: "3. Weekend activity apa yang paling kamu suka?",
       a: "Merencanakan perjalanan bersama teman-teman",
       b: "Menyusun strategi untuk mencapai tujuan baru",
       c: "Menghabiskan waktu bersama orang-orang terkasih",
     },
     {
-      questionText: "Apa kekuatan terbesarmu?",
+      questionText: "4. Apa kekuatan terbesarmu?",
       a: "Kesetiaan dan dedikasi",
       b: "Kecerdasan dan strategi",
       c: "Empati dan kehangatan",
     },
     {
-      questionText: "Bagaimana cara kamu menghadapi tantangan?",
+      questionText: "5. Bagaimana cara kamu menghadapi tantangan?",
       a: "Dengan ketenangan dan keterampilan praktis",
       b: "Dengan keberanian dan tekad yang kuat",
       c: "Dengan kecerdasan emosional dan kepemimpinan",
     },
     {
-      questionText: "Aroma mana yang paling kamu banget?",
+      questionText: "6. Aroma mana yang paling kamu banget?",
       a: "Aroma hangat dan kayu",
       b: "Aroma segar dan beraroma jeruk",
       c: "Aroma manis dan bunga",
     },
     {
-      questionText: "Karakter Toy Story mana yang paling kamu kagumi?",
+      questionText: "7. Karakter Toy Story mana yang paling kamu kagumi?",
       a: "Woody",
       b: "Buzz Lightyear",
       c: "Bo Peep",
     },
     {
-      questionText: "Gaya komunikasi mana yang kamu banget?",
+      questionText: "8. Gaya komunikasi mana yang kamu banget?",
       a: "To the point",
       b: "Enerjik dan persuasif",
       c: "Hangat dan empatik",
     },
     {
-      questionText: "Motivasi mana yang paling kamu banget?",
+      questionText: "9. Motivasi mana yang paling kamu banget?",
       a: "Kesuksesan pribadi dan pencapaian",
       b: "Menjadi yang terbaik dalam segala hal",
       c: "Membangun hubungan yang berarti dan mendukung orang lain",
     },
     {
-      questionText: "Bagaimana cara melepas stres?",
+      questionText: "10. Bagaimana cara melepas stres?",
       a: "Melakukan aktivitas di alam terbuka",
       b: "Mengikuti hobi atau aktivitas yang menghibur",
       c: "Menghabiskan waktu bersama keluarga atau teman-teman",
@@ -119,37 +119,40 @@ const QuestionList = () => {
       <div className="mt-8 rounded-lg bg-gray-800 p-8">
         {!loading ? (
           <>
-            <h2 className="mb-5 text-xl font-bold">{currentQuestion + 1}/10</h2>
-            <h2 className="mb-5 text-xl font-bold">
-              {questions[currentQuestion].questionText}
-            </h2>
+            <div className="bg-game-white border-game-light-blue shadow-game-light-blue mb-8 mt-8 max-w-screen-md rounded-3xl border-4 p-8 shadow-lg">
+              <h2 className="text-game-blue font-quicksand text-xl font-bold">
+                {questions[currentQuestion].questionText}
+              </h2>
+            </div>
             <div className="flex flex-col">
               <form className="flex flex-col">
                 <button
                   id="a-btn"
                   name="a-btn"
-                  className="mb-6 rounded-md bg-blue-500 p-2 font-medium text-white"
+                  className="bg-game-blue text-game-white font-quicksand mb-3 rounded-xl p-2 font-semibold"
                   value="A"
                   onClick={(e) => AnswerButtonClick(e)}
                 >
-                  {questions[currentQuestion].a}{" "}
+                  {"A) "} {questions[currentQuestion].a}{" "}
                 </button>
                 <button
                   id="b-btn"
                   name="b-btn"
-                  className="mb-6 rounded-md bg-blue-500 p-2 font-medium text-white"
+                  className="bg-game-blue text-game-white font-quicksand mb-3 rounded-xl p-2 font-semibold"
                   value="B"
                   onClick={(e) => AnswerButtonClick(e)}
                 >
+                  {"B) "}
                   {questions[currentQuestion].b}{" "}
                 </button>
                 <button
                   id="c-btn"
                   name="c-btn"
-                  className="mb-6 rounded-md bg-blue-500 p-2 font-medium text-white"
+                  className="bg-game-blue text-game-white font-quicksand mb-3 rounded-xl p-2 font-semibold"
                   value="C"
                   onClick={(e) => AnswerButtonClick(e)}
                 >
+                  {"C) "}
                   {questions[currentQuestion].c}{" "}
                 </button>
               </form>

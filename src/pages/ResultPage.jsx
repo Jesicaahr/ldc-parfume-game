@@ -64,9 +64,9 @@ const ResultPage = () => {
 
   return (
     <>
-      <div className="game-world-bg flex h-screen items-center justify-center bg-gray-900">
+      <div className="bg-game-grey flex h-screen items-center justify-center bg-gray-900">
         <div className="text-center text-white">
-          <h1 className="text-4xl font-bold">
+          <h1 className="font-quicksand text-4xl font-bold">
             GAME PERSONALITY TEST <br /> You Story & Product Scent
           </h1>
 

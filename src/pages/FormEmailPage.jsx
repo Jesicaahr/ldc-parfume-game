@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import fs from "fs";
 
 const FormEmailPage = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,18 @@ const FormEmailPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform any necessary actions with the email value
+
+    // fs.readFile("./emailList.json", "utf8", (err, jsonString) => {
+    //   if (err) {
+    //     return;
+    //   }
+    //   try {
+    //     const customer = JSON.parse(jsonString);
+    //     console.log("HEHEHE", customer);
+    //   } catch (err) {
+    //     console.log("Error parsing JSON string:", err);
+    //   }
+    // });
     console.log("Email:", email);
     navigate("/startplaying");
   };

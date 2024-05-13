@@ -1,0 +1,16 @@
+{
+    "emailList": [
+        {
+            "id": 1,
+            "email": "b7k7w@example.com"
+        },
+        {
+            "id": 2,
+            "email": "x7k7w@example.com"
+        },
+        {
+            "id": 3,
+            "email": "p7k7w@example.com"
+        }
+    ]
+}

@@ -7,12 +7,14 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="game-world-bg flex h-screen items-center justify-center bg-gray-900">
-        <div className="text-center text-white">
+      <div className="bg-game-grey flex h-screen items-center justify-center">
+        <div className="text-center">
           {!showInstruction ? (
             <>
-              <div className="mt-8 max-w-screen-md rounded-lg bg-gray-800 p-8">
-                <h1 className="mb-10 text-6xl font-bold">INTRODUCTION</h1>
+              <div className="bg-game-white border-game-light-blue shadow-game-light-blue mt-8 max-w-screen-md rounded-3xl border-4 p-8 shadow-lg">
+                <h1 className="font-quicksand text-game-light-blue mb-10 text-6xl font-bold">
+                  INTRODUCTION
+                </h1>
                 <p className="mt-10 text-lg">
                   Selamat datang di Tes Kepribadian <br />{" "}
                   <strong> Lador Keratin Perfumed Edition x Toy Story</strong>{" "}
@@ -25,7 +27,7 @@ const HomePage = () => {
                 </p>
                 <button
                   onClick={() => setShowInstruction(true)}
-                  className="mt-8 rounded-md bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-600"
+                  className="bg-game-yellow text-game-blue font-quicksand border-game-blue mt-8 rounded-md border-2 px-20 py-2 font-bold"
                 >
                   START!
                 </button>
@@ -33,16 +35,18 @@ const HomePage = () => {
             </>
           ) : (
             <>
-              <div className="mt-8 max-w-screen-md rounded-lg bg-gray-800 p-8">
-                <h1 className="mb-10 text-6xl font-bold">INSTRUCTIONS</h1>
+              <div className="bg-game-white border-game-light-blue shadow-game-light-blue mt-8 max-w-screen-md rounded-3xl border-4 p-8 shadow-lg">
+                <h1 className="font-quicksand text-game-light-blue mb-10 text-6xl font-bold">
+                  INSTRUCTIONS
+                </h1>
                 <p className="mt-10 text-lg">
                   Bacalah setiap pertanyaan dengan cermat dan pilih jawaban yang
                   paling menggambarkan diri Anda.
                 </p>
               </div>
               <button
-                onClick={() => navigate("/register")}
-                className="mt-8 rounded-md bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-600"
+                onClick={() => navigate("/startplaying")}
+                className="bg-game-yellow text-game-blue font-quicksand border-game-blue mt-8 rounded-md border-2 px-20 py-2 font-bold"
               >
                 YES, GOT IT!
               </button>
