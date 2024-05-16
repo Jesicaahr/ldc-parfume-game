@@ -54,7 +54,9 @@ const ResultPage = () => {
           maxKey = char;
         }
       }
-      setMaxChar(maxKey);
+      if (maxKey == "A") setMaxChar(0);
+      if (maxKey == "B") setMaxChar(1);
+      if (maxKey == "C") setMaxChar(2);
     }
 
     getMaxCharacter(result);
@@ -64,23 +66,30 @@ const ResultPage = () => {
 
   return (
     <>
-      <div className="bg-game-grey flex h-screen items-center justify-center bg-gray-900">
-        <div className="text-center text-white">
-          <h1 className="font-quicksand text-4xl font-bold">
-            GAME PERSONALITY TEST <br /> You Story & Product Scent
-          </h1>
-
-          <div className="mt-8 max-w-screen-md rounded-lg bg-gray-800 p-8">
-            {!maxChar && !loading ? (
-              <p className="text-xl font-medium">Hasilnya apa yaaa.......</p>
-            ) : (
-              <p className="text-2xl font-medium">
-                Hasilnya adalah ..... {maxChar === "A" && resultLists[0].value}{" "}
-                {maxChar === "B" && resultLists[1].value}{" "}
-                {maxChar === "C" && resultLists[2].value}
-              </p>
-            )}
-          </div>
+      <div className="flex h-screen items-center justify-center bg-game-grey">
+        <div className="mt-8 h-5/6 w-4/6 rounded-[50px] border-4 border-game-white bg-game-white p-16 shadow-[-10px_10px_0_0_rgba(1,78,153,0.75)] shadow-game-light-blue">
+          {maxChar !== null && (
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center justify-between">
+                <h1 className="font-quicksand text-4xl font-bold text-game-light-blue">
+                  RESULT <br /> {resultLists[maxChar].value}
+                </h1>
+                <p className="w-1/3 text-right">
+                  {resultLists[maxChar].description}
+                </p>
+              </div>
+              <div className="mt-12 flex w-2/3 flex-col text-center">
+                {resultLists[maxChar].point.map((point, index) => (
+                  <p
+                    key={index}
+                    className="mb-4 w-1/3 rounded-md border-2 border-game-blue bg-game-yellow py-1 font-quicksand font-bold text-game-blue"
+                  >
+                    {point}
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
