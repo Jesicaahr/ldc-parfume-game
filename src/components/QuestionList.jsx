@@ -159,7 +159,9 @@ const QuestionList = () => {
             </div>
           </>
         ) : (
-          <p>Loading...</p>
+          <p className="font-quicksand text-3xl font-bold text-game-light-blue">
+            Loading...
+          </p>
         )}
       </div>
     </>

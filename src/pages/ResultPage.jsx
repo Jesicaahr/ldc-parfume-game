@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const ResultPage = () => {
   const result = JSON.parse(localStorage.getItem("result"));
   const [maxChar, setMaxChar] = useState(null);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const resultLists = [
     {
@@ -42,7 +42,7 @@ const ResultPage = () => {
   ];
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
     function getMaxCharacter(obj) {
       const chars = obj;
       let max = 0;
@@ -61,7 +61,7 @@ const ResultPage = () => {
 
     getMaxCharacter(result);
 
-    setLoading(false);
+    // setLoading(false);
   }, [result]);
 
   return (
