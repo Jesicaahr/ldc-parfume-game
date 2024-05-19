@@ -73,7 +73,7 @@ const ResultPage = () => {
   return (
     <>
       <div className="flex h-screen items-center justify-center bg-game-grey">
-        <div className="mt-8 h-5/6 w-4/6 rounded-[50px] border-4 border-game-white bg-game-white px-16 py-8 shadow-[-10px_10px_0_0_rgba(1,78,153,0.75)] shadow-game-light-blue">
+        <div className="w-4/6 rounded-[50px] border-4 border-game-white bg-game-white px-16 py-8 shadow-[-10px_10px_0_0_rgba(1,78,153,0.75)] shadow-game-light-blue">
           {maxChar !== null && (
             <div className="flex flex-col items-center">
               <div className="flex flex-row items-center justify-between">
