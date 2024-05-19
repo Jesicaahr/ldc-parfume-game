@@ -9,6 +9,17 @@ const HomePage = () => {
     <>
       <div className="flex h-screen items-center justify-center bg-game-grey">
         <div className="text-center">
+          <div className="flex flex-row items-center justify-center gap-3">
+            <img src="/lador-logo.png" alt="logo-lador" className="w-[20%]" />
+            <h1 className="font-quicksand text-4xl font-bold text-game-light-blue">
+              X
+            </h1>
+            <img
+              src="/toy-story-logo.png"
+              alt="logo-toy-story"
+              className="h-auto w-[15%]"
+            />
+          </div>
           {!showInstruction ? (
             <>
               <div className="mt-8 max-w-screen-md rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-[22px_22px_0_0_rgba(1,78,153,0.75)] shadow-game-light-blue">
@@ -35,7 +46,7 @@ const HomePage = () => {
             </>
           ) : (
             <>
-              <div className="flex max-w-screen-md flex-row items-center gap-8 rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-[22px_22px_0_0_rgba(1,78,153,0.75)] shadow-game-light-blue">
+              <div className="mt-8 flex max-w-screen-md flex-row items-center gap-8 rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-[22px_22px_0_0_rgba(1,78,153,0.75)] shadow-game-light-blue">
                 <h1 className="rounded-full bg-game-light-blue p-4 font-quicksand text-4xl font-bold text-game-white">
                   INSTRUCTIONS
                 </h1>
