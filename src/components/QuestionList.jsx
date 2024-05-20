@@ -116,11 +116,11 @@ const QuestionList = () => {
   };
   return (
     <>
-      <div className="bg-gray-800 mt-8 rounded-lg p-8">
+      <div className="max-w-[90vw] rounded-lg lg:max-w-screen-md">
         {!loading ? (
           <>
-            <div className="mb-8 mt-8 max-w-screen-md rounded-[30px] border-4 border-game-blue bg-game-white p-8 shadow-[-10px_10px_0_0_game-blue] shadow-game-blue">
-              <h1 className="font-quicksand text-3xl font-bold text-game-blue">
+            <div className="lg:shadow-box-lg-question shadow-box-sm-question mb-8 mt-8 rounded-[30px] border-4 border-game-blue bg-game-white p-4 shadow-game-blue lg:p-8">
+              <h1 className="font-quicksand text-2xl font-bold text-game-blue lg:text-3xl">
                 {questions[currentQuestion].questionText}
               </h1>
             </div>
@@ -129,7 +129,7 @@ const QuestionList = () => {
                 <button
                   id="a-btn"
                   name="a-btn"
-                  className="mb-3 rounded-[14px] bg-game-blue py-3 font-quicksand font-semibold text-game-white"
+                  className="mb-3 rounded-[14px] bg-game-blue px-5 py-3 font-quicksand font-semibold text-game-white lg:px-0"
                   value="A"
                   onClick={(e) => AnswerButtonClick(e)}
                 >
@@ -138,7 +138,7 @@ const QuestionList = () => {
                 <button
                   id="b-btn"
                   name="b-btn"
-                  className="mb-3 rounded-[14px] bg-game-blue py-3 font-quicksand font-semibold text-game-white"
+                  className="mb-3 rounded-[14px] bg-game-blue px-5 py-3 font-quicksand font-semibold text-game-white lg:px-0"
                   value="B"
                   onClick={(e) => AnswerButtonClick(e)}
                 >
@@ -148,7 +148,7 @@ const QuestionList = () => {
                 <button
                   id="c-btn"
                   name="c-btn"
-                  className="mb-3 rounded-[14px] bg-game-blue py-3 font-quicksand font-semibold text-game-white"
+                  className="mb-3 rounded-[14px] bg-game-blue px-5 py-3 font-quicksand font-semibold text-game-white lg:px-0"
                   value="C"
                   onClick={(e) => AnswerButtonClick(e)}
                 >
