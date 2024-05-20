@@ -25,17 +25,17 @@ const HomePage = () => {
         </div>
         {!showInstruction ? (
           <>
-            <div className="shadow-box-sm-light lg:shadow-box-lg-light mt-6 max-w-[90vw] rounded-[50px] border-4 border-game-light-blue bg-game-white p-5 shadow-game-light-blue lg:mt-8 lg:max-w-screen-md lg:p-8">
+            <div className="mt-6 max-w-[90vw] rounded-[50px] border-4 border-game-light-blue bg-game-white p-5 shadow-box-sm-light shadow-game-light-blue lg:mt-8 lg:max-w-screen-md lg:p-8 lg:shadow-box-lg-light">
               <h1 className="mb-1 font-quicksand text-3xl font-bold text-game-light-blue lg:mb-10 lg:text-6xl">
                 INTRODUCTION
               </h1>
               <p className="text-md mt-5 lg:mt-10 lg:text-lg">
-                Selamat datang di Tes Kepribadian <br />{" "}
+                Selamat datang di Pesonality Test <br />{" "}
                 <strong> Lador Keratin Perfumed Edition x Toy Story</strong>{" "}
-                <br /> <br /> Dalam permainan yang menyenangkan ini, Anda akan{" "}
+                <br /> <br /> Dalam permainan yang menyenangkan ini, kamu akan{" "}
                 <br />{" "}
                 <strong>
-                  temukan aroma mana yang paling cocok dengan kepribadian Anda
+                  menemukan aroma mana yang paling cocok dengan kepribadianmu
                 </strong>{" "}
                 berdasarkan karakter-karakter ikonik Toy Story!
               </p>
@@ -49,13 +49,13 @@ const HomePage = () => {
           </>
         ) : (
           <>
-            <div className="shadow-box-sm-light lg:shadow-box-lg-light mt-8 flex max-w-[90vw] flex-col items-center gap-4 rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-game-light-blue lg:max-w-screen-md lg:flex-row lg:gap-8">
+            <div className="mt-8 flex max-w-[90vw] flex-col items-center gap-4 rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-box-sm-light shadow-game-light-blue lg:max-w-screen-md lg:flex-row lg:gap-8 lg:shadow-box-lg-light">
               <h1 className="rounded-full bg-game-light-blue p-4 px-10 font-quicksand text-2xl font-bold text-game-white lg:text-4xl">
                 INSTRUCTIONS
               </h1>
               <p className="text-md lg:text-lg">
                 Bacalah setiap pertanyaan dengan cermat dan pilih jawaban yang
-                paling menggambarkan diri Anda.
+                paling menggambarkan dirimu!
               </p>
             </div>
             <button

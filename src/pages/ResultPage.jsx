@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ResultPage = () => {
   const result = JSON.parse(localStorage.getItem("result"));
   const [maxChar, setMaxChar] = useState(null);
+  const navigate = useNavigate();
 
   const resultLists = [
     {
@@ -68,43 +70,51 @@ const ResultPage = () => {
 
   return (
     <>
-      <div className=" shadow-box-lg-result my-10 max-w-[90vw] rounded-[50px] border-4 border-game-white bg-game-white p-5 shadow-game-light-blue lg:max-w-screen-md lg:px-16 lg:py-8">
-        {maxChar !== null && (
-          <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center justify-between gap-3 lg:flex-row">
-              <h1 className="text-center font-quicksand text-3xl font-bold text-game-light-blue lg:text-left lg:text-4xl">
-                RESULT <br /> {resultLists[maxChar].value}
-              </h1>
-              <p className="text-center lg:w-1/3 lg:text-right">
-                {resultLists[maxChar].description}
-              </p>
-            </div>
-            <div className="mt-6 flex flex-col items-center justify-center lg:flex-row">
-              <div className="flex-col px-2 text-center">
-                {resultLists[maxChar].point.map((point, index) => (
-                  <p
-                    key={index}
-                    className="mb-2 rounded-md border-2 border-game-blue bg-game-yellow px-5 py-1 font-quicksand font-bold text-game-blue lg:mb-4"
-                  >
-                    {point}
-                  </p>
-                ))}
+      <div className="flex flex-col items-end">
+        <div className="my-10 max-w-[90vw] rounded-[50px] border-4 border-game-white bg-game-white p-5 shadow-box-lg-result shadow-game-light-blue lg:my-5 lg:max-w-screen-md lg:px-16 lg:py-8">
+          {maxChar !== null && (
+            <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center justify-between gap-3 lg:flex-row">
+                <h1 className="text-center font-quicksand text-3xl font-bold text-game-light-blue lg:text-left lg:text-4xl">
+                  RESULT <br /> {resultLists[maxChar].value}
+                </h1>
+                <p className="text-center lg:w-1/3 lg:text-right">
+                  {resultLists[maxChar].description}
+                </p>
               </div>
-              <div className="flex flex-row items-end">
-                <img
-                  src={resultLists[maxChar].imageLador}
-                  alt="result-lador"
-                  className="mr-[-45px] h-[150px] w-auto"
-                />
-                <img
-                  src={resultLists[maxChar].imageStory}
-                  alt="result-story"
-                  className="h-[300px] w-auto"
-                />
+              <div className="mt-6 flex flex-col items-center justify-center lg:flex-row">
+                <div className="flex-col px-2 text-center">
+                  {resultLists[maxChar].point.map((point, index) => (
+                    <p
+                      key={index}
+                      className="mb-2 rounded-md border-2 border-game-blue bg-game-yellow px-5 py-1 font-quicksand font-bold text-game-blue lg:mb-4"
+                    >
+                      {point}
+                    </p>
+                  ))}
+                </div>
+                <div className="flex flex-row items-end">
+                  <img
+                    src={resultLists[maxChar].imageLador}
+                    alt="result-lador"
+                    className="mr-[-45px] h-[150px] w-auto"
+                  />
+                  <img
+                    src={resultLists[maxChar].imageStory}
+                    alt="result-story"
+                    className="h-[300px] w-auto"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
+        <button
+          onClick={() => navigate("/startplaying")}
+          className="rounded-[50px] border-2  bg-game-blue px-8 py-2 font-quicksand font-bold text-game-white"
+        >
+          MAIN LAGI {">"}
+        </button>
       </div>
     </>
   );
