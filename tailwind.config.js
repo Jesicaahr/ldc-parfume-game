@@ -13,6 +13,9 @@ export default {
       'game-grey': '#E8E6E6',
       'game-black': '#000000',
       
+    }, boxShadow: {
+      'box-sm-light': '13px 13px 0px 0px #014E99',
+      'box-lg-light': '22px 22px 0px 0px #014E99',
     }
   },
   plugins: [],
