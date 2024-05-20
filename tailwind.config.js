@@ -18,6 +18,7 @@ export default {
       'box-lg-light': '22px 22px 0px 0px #014E99',
       'box-lg-question': '-10px 10px 0px 0px #13446A',
       'box-sm-question': '-7px 7px 0px 0px #13446A',
+      'box-lg-result': '-10px 10px 0px 0px #014E99',
     }
   },
   plugins: [],
