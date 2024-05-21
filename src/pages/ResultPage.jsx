@@ -71,7 +71,7 @@ const ResultPage = () => {
   return (
     <>
       <div className="flex flex-col items-end">
-        <div className="my-10 max-w-[90vw] rounded-[50px] border-4 border-game-white bg-game-white p-5 shadow-box-lg-result shadow-game-light-blue lg:my-5 lg:max-w-screen-md lg:px-16 lg:py-8">
+        <div className="mb-5 mt-10 max-w-[90vw] rounded-[50px] border-4 border-game-white bg-game-white p-5 shadow-box-lg-result shadow-game-light-blue lg:my-5 lg:max-w-screen-md lg:px-16 lg:py-8">
           {maxChar !== null && (
             <div className="flex flex-col items-center">
               <div className="flex flex-col items-center justify-between gap-3 lg:flex-row">
@@ -110,8 +110,8 @@ const ResultPage = () => {
           )}
         </div>
         <button
-          onClick={() => navigate("/startplaying")}
-          className="rounded-[50px] border-2  bg-game-blue px-8 py-2 font-quicksand font-bold text-game-white"
+          onClick={() => navigate("/")}
+          className="mb-8 rounded-[50px] border-2  bg-game-blue px-8 py-2 font-quicksand font-bold text-game-white"
         >
           MAIN LAGI {">"}
         </button>

@@ -14,9 +14,9 @@ const HomePage = () => {
             alt="logo-lador"
             className="w-[30%] lg:w-[20%]"
           />
-          <h1 className="font-quicksand text-2xl font-bold text-game-light-blue lg:text-4xl">
+          {/* <h1 className="font-quicksand text-2xl font-bold text-game-light-blue lg:text-4xl">
             X
-          </h1>
+          </h1> */}
           <img
             src="/toy-story-logo.png"
             alt="logo-toy-story"
