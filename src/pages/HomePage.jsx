@@ -7,16 +7,14 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center">
-        <div className="flex flex-row items-center justify-center gap-3">
+      <div className="flex flex-col text-center">
+        <div className="flex max-w-[90vw] flex-row items-center justify-between lg:max-w-screen-md">
           <img
             src="/lador-logo.png"
             alt="logo-lador"
             className="w-[30%] lg:w-[20%]"
           />
-          {/* <h1 className="font-quicksand text-2xl font-bold text-game-light-blue lg:text-4xl">
-            X
-          </h1> */}
+
           <img
             src="/toy-story-logo.png"
             alt="logo-toy-story"
@@ -49,21 +47,23 @@ const HomePage = () => {
           </>
         ) : (
           <>
-            <div className="mt-8 flex max-w-[90vw] flex-col items-center gap-4 rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-box-sm-light shadow-game-light-blue lg:max-w-screen-md lg:flex-row lg:gap-8 lg:shadow-box-lg-light">
-              <h1 className="rounded-full bg-game-light-blue p-4 px-10 font-quicksand text-2xl font-bold text-game-white lg:text-4xl">
-                INSTRUCTIONS
-              </h1>
-              <p className="text-md lg:text-lg">
-                Bacalah setiap pertanyaan dengan cermat dan pilih jawaban yang
-                paling menggambarkan dirimu!
-              </p>
+            <div className="flex flex-col items-center justify-center">
+              <div className="mt-8 flex max-w-[90vw] flex-col items-center gap-4 rounded-[50px] border-4 border-game-light-blue bg-game-white p-8 shadow-box-sm-light shadow-game-light-blue lg:max-w-screen-md lg:flex-row lg:gap-8 lg:shadow-box-lg-light">
+                <h1 className="rounded-full bg-game-light-blue p-4 px-10 font-quicksand text-2xl font-bold text-game-white lg:text-4xl">
+                  INSTRUCTIONS
+                </h1>
+                <p className="text-md lg:text-lg">
+                  Bacalah setiap pertanyaan dengan cermat dan pilih jawaban yang
+                  paling menggambarkan dirimu!
+                </p>
+              </div>
+              <button
+                onClick={() => navigate("/startplaying")}
+                className="mt-12  w-1/2 rounded-md border-2 border-game-blue bg-game-yellow py-2 font-quicksand font-bold text-game-blue lg:w-1/3"
+              >
+                YES, GOT IT!
+              </button>
             </div>
-            <button
-              onClick={() => navigate("/startplaying")}
-              className="mt-12 rounded-md border-2 border-game-blue bg-game-yellow px-20 py-2 font-quicksand font-bold text-game-blue"
-            >
-              YES, GOT IT!
-            </button>
           </>
         )}
       </div>
