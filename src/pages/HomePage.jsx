@@ -24,14 +24,13 @@ const HomePage = () => {
         {!showInstruction ? (
           <>
             <div className="mt-6 max-w-[90vw] rounded-[50px] border-4 border-game-light-blue bg-game-white p-5 shadow-box-sm-light shadow-game-light-blue lg:mt-8 lg:max-w-screen-md lg:p-8 lg:shadow-box-lg-light">
-              <h1 className="mb-1 font-quicksand text-3xl font-bold text-game-light-blue lg:mb-10 lg:text-6xl">
+              <h1 className="mb-1 font-quicksand text-3xl font-bold text-game-light-blue lg:text-6xl">
                 INTRODUCTION
               </h1>
-              <p className="text-md mt-5 lg:mt-10 lg:text-lg">
+              <p className="text-md mt-5 lg:text-lg">
                 Selamat datang di Pesonality Test <br />{" "}
-                <strong> Lador Keratin Perfumed Edition x Toy Story</strong>{" "}
-                <br /> <br /> Dalam permainan yang menyenangkan ini, kamu akan{" "}
-                <br />{" "}
+                <strong> Lador Keratin Perfumed Edition</strong> <br /> <br />{" "}
+                Dalam permainan yang menyenangkan ini, kamu akan <br />{" "}
                 <strong>
                   menemukan aroma mana yang paling cocok dengan kepribadianmu
                 </strong>{" "}
