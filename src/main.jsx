@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import PlayGamePage from "./pages/PlayGamePage.jsx";
 import ResultPage from "./pages/ResultPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
 import FormEmailPage from "./pages/FormEmailPage.jsx";
 
 const router = createBrowserRouter([
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "/register", element: <FormEmailPage /> },
       { path: "/startplaying", element: <PlayGamePage /> },
       { path: "/result", element: <ResultPage /> },
+      { path: "/profile", element: <ProfilePage /> },
     ],
   },
 ]);

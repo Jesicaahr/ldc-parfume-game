@@ -110,7 +110,7 @@ const QuestionList = () => {
     if (currentQuestion == 9) {
       setTimeout(() => {
         setLoading(false);
-        navigate("/result");
+        navigate("/profile");
       }, 500);
     }
   };

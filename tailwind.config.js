@@ -12,6 +12,7 @@ export default {
       'game-white': '#ffffff',
       'game-grey': '#E8E6E6',
       'game-black': '#000000',
+      'game-red': '#FF0000',
       
     }, boxShadow: {
       'box-sm-light': '13px 13px 0px 0px #014E99',
