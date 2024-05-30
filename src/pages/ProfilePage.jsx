@@ -47,11 +47,15 @@ const FormProfilePage = () => {
 
   return (
     <>
-      <div className="flex max-w-[90vw] items-center justify-center font-quicksand lg:max-w-screen-md">
+      <div className="flex max-w-[90vw] items-center justify-center font-quicksand lg:max-w-[30vw]">
         <div className="text-white text-center">
-          <h1 className="mb-5 text-4xl font-bold">
+          <h1 className="mb-2 text-4xl font-bold">
             Submit Profil Kamu di sini!
           </h1>
+          <p className="text-md mb-5 font-bold">
+            Be the first to know our latest updates! Please fill in your
+            detailed information below for future surprises.
+          </p>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="mt-2 flex flex-col"
@@ -67,7 +71,7 @@ const FormProfilePage = () => {
                 })}
               />
               {errors.name && (
-                <span className="text-game-red ml-3 text-sm">
+                <span className="ml-3 text-sm text-game-red">
                   {errors.name.message}
                 </span>
               )}
@@ -83,7 +87,7 @@ const FormProfilePage = () => {
                 })}
               />
               {errors.email && (
-                <span className="text-game-red ml-3 text-sm">
+                <span className="ml-3 text-sm text-game-red">
                   {errors.email.message}
                 </span>
               )}
@@ -99,7 +103,7 @@ const FormProfilePage = () => {
                 })}
               />
               {errors.whatsapp_number && (
-                <span className="text-game-red ml-3 text-sm">
+                <span className="ml-3 text-sm text-game-red">
                   {errors.whatsapp_number.message}
                 </span>
               )}
@@ -115,7 +119,7 @@ const FormProfilePage = () => {
                 })}
               />
               {errors.birth_year && (
-                <span className="text-game-red ml-3 text-sm">
+                <span className="ml-3 text-sm text-game-red">
                   {errors.birth_year.message}
                 </span>
               )}

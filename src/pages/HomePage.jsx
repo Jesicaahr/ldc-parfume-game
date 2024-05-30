@@ -16,7 +16,7 @@ const HomePage = () => {
           />
 
           <img
-            src="/toy-story-logo.png"
+            src="/toy-story-logo-2.png"
             alt="logo-toy-story"
             className="h-auto w-[25%] lg:w-[15%]"
           />
